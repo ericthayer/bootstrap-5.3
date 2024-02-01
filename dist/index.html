@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Bootstrap w/ Vite</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script type="module" crossorigin src="/assets/index-pAgCy4eG.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0sIk45R6.css">
+  </head>
+  <body>
+    <div
+      class="app-header mb-lg-2"
+      role="Banner"
+      data-bs-theme="light"
+    >
+      <nav
+        class="navbar navbar-expand-lg py-lg-3 bg-secondary-subtle sticky-top"
+      >
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="#"
+            ><span class="d-flex gap-2 align-items-center"
+              ><img src="src/images/logo-cobank.png" alt="CoBank"> <small><code>5.3</code></small></span
+            ></a
+          >
+          <button
+            class="navbar-toggler my-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-lg-end"
+            id="navbarText"
+          >
+            <ul class="navbar-nav me-auto me-lg-0 mb-2 mb-lg-0">
+              <li class="nav-item d-lg-none">
+                <a
+                  class="nav-link"
+                  href="#actions"
+                  >Actions</a
+                >
+              </li>
+              <li class="nav-item d-lg-none">
+                <a
+                  class="nav-link"
+                  href="#communication"
+                  >Communication</a
+                >
+              </li>
+              <li class="nav-item d-lg-none">
+                <a
+                  class="nav-link"
+                  href="#layout"
+                  >Layout</a
+                >
+              </li>
+              <li class="nav-item d-lg-none">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="#patterns"
+                  >Patterns</a
+                >
+              </li>
+              <li class="nav-item d-none pb-3 pb-lg-0">
+                <form class="d-flex flex-grow-1 gap-3 px-3 pe-lg-0">
+                  <div class="">
+                    <input
+                      type="search"
+                      class="form-control bg-secondary"
+                      id="exampleInputEmail1"
+                      aria-describedby="searchHelp"
+                      placeholder="search"
+                      data-bs-theme="light"
+                    />
+                    <div
+                      id="searchHelp"
+                      class="form-text visually-hidden"
+                    >
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                  <div class="">
+                    <button
+                      type="button"
+                      class="btn btn-outline-secondary px-2 align-items-center d-flex"
+                    >
+                      <span class="material-symbols-outlined">search</span>
+                    </button>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <main
+      id="main"
+      class="app-main"
+      role="main"
+    >
+      <div class="container">
+        <div class="row">
+          <aside
+            class="sidebar d-none d-lg-block col-lg-2 py-4 ps-4 sticky-top h-100"
+          >
+            <div
+              id="list-example"
+              class="list-group list-group-flush"
+            >
+              <a
+                class="list-group-item list-group-item-action list-group-item-header"
+                href="#actions"
+                >Actions</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#buttons"
+                >Buttons</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#button"
+                >Button Group</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#header-actions"
+                >Header Actions</a
+              >
+              <a
+                class="list-group-item list-group-item-action list-group-item-header"
+                href="#communication"
+                >Communication</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#icon"
+                >Icon</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#spinners"
+                >Spinners</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#alert"
+                >Alert</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#badge"
+                >Badge</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#modal"
+                >Modal</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#tooltips"
+                >Tooltips</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#toasts"
+                >Toasts</a
+              >
+              <a
+                class="list-group-item list-group-item-action ps-4"
+                href="#spinners"
+                >Spinners</a
+              >
+            </div>
+          </aside>
+          <section class="main-content col-lg-10 py-4 px-4">
+            <div
+              data-bs-spy="scroll"
+              data-bs-target="#list-example"
+              data-bs-smooth-scroll="true"
+              tabindex="0"
+            >
+              <!-- Actions -->
+              <div class="component-category">
+                <h2
+                  id="actions"
+                  class="h3"
+                >
+                  Actions
+                </h2>
+                <hr class="d-block mt-0 mb-5" />
+                <!-- Buttons -->
+                <article class="component-section">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
+                    <h3
+                      id="buttons"
+                      class="h5"
+                    >
+                      Buttons
+                    </h3>
+                    <div class="d-flex gap-3">
+                      <a
+                        class="icon-link text-body-tertiary"
+                        href="https://getbootstrap.com/docs/5.3/components/buttons/"
+                        title="Bootstrap documentation"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-bootstrap-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"
+                          />
+                          <path
+                            d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="icon-link text-body-tertiary"
+                        href="https://www.figma.com/file/IrWs5zaj5RUhOxKs0Du9xW/Roots-v0.0.1?type=design&node-id=736-861&mode=design&t=jHMBn4XWXLEp7p8h-4"
+                        title="Figma example"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16px"
+                          height="16px"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M8.537 24L8.537 24c-1.933 0-3.5-1.567-3.5-3.5l0 0c0-1.933 1.567-3.5 3.5-3.5h3.5v3.5C12.037 22.433 10.47 24 8.537 24zM16.5 8H13V1h3.5C18.433 1 20 2.567 20 4.5l0 0C20 6.433 18.433 8 16.5 8zM8.5 8H12V1H8.5C6.567 1 5 2.567 5 4.5l0 0C5 6.433 6.567 8 8.5 8zM8.5 16H12V9H8.5C6.567 9 5 10.567 5 12.5l0 0C5 14.433 6.567 16 8.5 16zM16 9A3 3 0 1016 15 3 3 0 1016 9z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="mb-4">
+                    Bootstrap has a base <code>.btn</code> class that sets up
+                    basic styles such as padding and content alignment. By
+                    default, <code>.btn</code> controls have a transparent
+                    border and background color, and lack any explicit focus and
+                    hover styles.
+                  </p>
+                  <div
+                    class="d-flex flex-wrap gap-3 justify-content-center border border-secondary-subtle rounded-2 py-4 px-3"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      Primary
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                    >
+                      Secondary
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                    >
+                      Success
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                    >
+                      Danger
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-warning"
+                    >
+                      Warning
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-info"
+                    >
+                      Info
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-light"
+                    >
+                      Light
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-dark"
+                    >
+                      Dark
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-link"
+                    >
+                      Link
+                    </button>
+                  </div>
+                </article>
+                <!-- Button Group -->
+                <article class="component-section">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
+                    <h3
+                      id="button-group"
+                      class="h5"
+                    >
+                      Button Group
+                    </h3>
+                    <div class="d-flex gap-3">
+                      <a
+                        class="icon-link text-body-tertiary"
+                        href="https://getbootstrap.com/docs/5.3/components/button-group/"
+                        title="Bootstrap documentation"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-bootstrap-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"
+                          />
+                          <path
+                            d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="icon-link text-body-tertiary"
+                        href="#0"
+                        title="Figma example"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16px"
+                          height="16px"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M8.537 24L8.537 24c-1.933 0-3.5-1.567-3.5-3.5l0 0c0-1.933 1.567-3.5 3.5-3.5h3.5v3.5C12.037 22.433 10.47 24 8.537 24zM16.5 8H13V1h3.5C18.433 1 20 2.567 20 4.5l0 0C20 6.433 18.433 8 16.5 8zM8.5 8H12V1H8.5C6.567 1 5 2.567 5 4.5l0 0C5 6.433 6.567 8 8.5 8zM8.5 16H12V9H8.5C6.567 9 5 10.567 5 12.5l0 0C5 14.433 6.567 16 8.5 16zM16 9A3 3 0 1016 15 3 3 0 1016 9z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="mb-4">
+                    Group a series of buttons together on a single line or stack
+                    them in a vertical column.
+                  </p>
+                  <div
+                    class="d-flex flex-wrap gap-3 justify-content-center border border-secondary-subtle rounded-2 py-4 px-3"
+                  >
+                    <div
+                      class="btn-group btn-group-lg"
+                      role="group"
+                      aria-label="Large button group"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Left
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Middle
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Right
+                      </button>
+                    </div>
+                    <br />
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Default button group"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Left
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Middle
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Right
+                      </button>
+                    </div>
+                    <br />
+                    <div
+                      class="btn-group btn-group-sm"
+                      role="group"
+                      aria-label="Small button group"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Left
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Middle
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                      >
+                        Right
+                      </button>
+                    </div>
+                  </div>
+                </article>
+                <!-- Header Actions -->
+                <article class="component-section">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
+                    <h3
+                      id="button-group"
+                      class="h5"
+                    >
+                      Header Actions
+                    </h3>
+                    <div class="d-flex gap-3">
+                      <a
+                        class="icon-link text-body-tertiary"
+                        href="https://getbootstrap.com/docs/5.3/components/button-group/"
+                        title="Bootstrap documentation"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-bootstrap-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"
+                          />
+                          <path
+                            d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        class="icon-link text-body-tertiary"
+                        href="#0"
+                        title="Figma example"
+                        target="_blank"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16px"
+                          height="16px"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M8.537 24L8.537 24c-1.933 0-3.5-1.567-3.5-3.5l0 0c0-1.933 1.567-3.5 3.5-3.5h3.5v3.5C12.037 22.433 10.47 24 8.537 24zM16.5 8H13V1h3.5C18.433 1 20 2.567 20 4.5l0 0C20 6.433 18.433 8 16.5 8zM8.5 8H12V1H8.5C6.567 1 5 2.567 5 4.5l0 0C5 6.433 6.567 8 8.5 8zM8.5 16H12V9H8.5C6.567 9 5 10.567 5 12.5l0 0C5 14.433 6.567 16 8.5 16zM16 9A3 3 0 1016 15 3 3 0 1016 9z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="mb-4">TBD</p>
+                  <div
+                    class="d-flex flex-wrap gap-3 justify-content-center border border-secondary-subtle rounded-2 py-4 px-3"
+                  >
+                    <div placeholder></div>
+                  </div>
+                </article>
+              </div>
+              <!-- Communication -->
+              <div class="component-category">
+                <h2
+                  id="communication"
+                  class="h3"
+                >
+                  Communication
+                </h2>
+                <hr class="d-block mt-0 mb-5" />
+                <article class="component-section">
+                  <h3
+                    id="icon"
+                    class="h5"
+                  >
+                    Icon
+                  </h3>
+                  <p class="mb-4">
+                    This is some placeholder content for the scrollspy page.
+                    Note that as you scroll down the page, the appropriate
+                    navigation link is highlighted. It's repeated throughout the
+                    component example. We keep adding some more example copy
+                    here to emphasize the scrolling and highlighting.
+                  </p>
+                  <div
+                    class="d-flex flex-wrap gap-3 justify-content-center border border-secondary-subtle rounded-2 py-4 px-3"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                    >
+                      Primary
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                    >
+                      Secondary
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success"
+                    >
+                      Success
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                    >
+                      Danger
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-warning"
+                    >
+                      Warning
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-info"
+                    >
+                      Info
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-light"
+                    >
+                      Light
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-dark"
+                    >
+                      Dark
+                    </button>
+
+                    <button
+                      type="button"
+                      class="btn btn-link"
+                    >
+                      Link
+                    </button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="app-footer"
+      role="conent-info"
+    ></footer>
+  </body>
+</html>
