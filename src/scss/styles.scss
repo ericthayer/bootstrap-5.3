@@ -67,8 +67,11 @@ svg {
   max-width: 100%;
 }
 
-.navbar-brand svg {
-  width: 8rem;
+.navbar-brand {
+  img,
+  svg {
+    width: 8rem;
+  }
 }
 
 .list-group-item-header {
@@ -103,3 +106,6 @@ svg {
     padding-top: 2rem;
   }
 }
+
+// docs
+//  @import "docs";
