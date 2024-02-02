@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html
+  lang="en"
+  data-bs-theme="light"
+>
   <head>
     <meta charset="utf-8" />
     <meta
@@ -12,7 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
   </head>
-  <body>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#ComponentList"
+    data-bs-smooth-scroll="true"
+  >
     <div
       class="app-header mb-lg-3"
       role="Banner"
@@ -106,29 +113,71 @@
                 </form>
               </li>
             </ul>
-            <div class="d-flex gap-2">                          
+            <div class="d-flex gap-2">
               <a
                 href="https://getbootstrap.com/"
                 class="pb-2 pe-lg-3"
                 ><small>Bootstrap <code>5.3</code></small></a
               >
               <a
-              href="https://github.com/ericthayer/cobank-component-library"
-              class="pb-2"
-              ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-              </svg></a
-            > 
-            <div class="dropdown color-mode-picker pb-2 ps-2 pe-lg-3">
-              <a href="#0" class="dropdown-toggle px-0" data-bs-display="static" data-bs-toggle="dropdown" title="Pick color mode" aria-expanded="false">
-                <span class="material-symbols-outlined" style="top: 2px; position: relative;">invert_colors</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end">
-                <li><button class="dropdown-item" type="button">Action</button></li>
-                <li><button class="dropdown-item" type="button">Another action</button></li>
-                <li><button class="dropdown-item" type="button">Something else here</button></li>
-              </ul>
-            </div>            
+                href="https://github.com/ericthayer/cobank-component-library"
+                class="pb-2"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-github"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                  /></svg
+              ></a>
+              <div class="dropdown color-mode-picker pb-2 ps-2 pe-lg-3">
+                <a
+                  href="#0"
+                  class="dropdown-toggle px-0"
+                  data-bs-display="static"
+                  data-bs-toggle="dropdown"
+                  title="Pick color mode"
+                  aria-expanded="false"
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="top: 2px; position: relative"
+                    >invert_colors</span
+                  >
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-start dropdown-menu-lg-end"
+                >
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      type="button"
+                    >
+                      Action
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      type="button"
+                    >
+                      Another action
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      class="dropdown-item"
+                      type="button"
+                    >
+                      Something else here
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -145,16 +194,16 @@
             class="sidebar d-none d-lg-block col-lg-2 py-4 ps-4 sticky-top h-100"
           >
             <div
-              id="list-example"
+              id="ComponentList"
               class="list-group list-group-flush"
             >
-              <!-- *** Foundation *** -->
+              <!-- Foundation -->
               <a
                 class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold link-underline link-underline-opacity-0 fs-6"
                 href="#foundation"
                 >Foundation</a
               >
-              
+
               <a
                 class="list-group-item list-group-item-action py-1 px-2"
                 href="#tokens"
@@ -170,7 +219,7 @@
                 href="#buttons"
                 >Tokens</a
               >
-              <!-- *** Actions *** -->
+              <!-- Actions -->
               <a
                 class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold link-underline link-underline-opacity-0 fs-6"
                 href="#actions"
@@ -191,7 +240,7 @@
                 href="#header-actions"
                 >Header Actions</a
               >
-              <!-- *** Communication *** -->
+              <!-- Communication -->
               <a
                 class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold link-underline link-underline-opacity-0 fs-6"
                 href="#communication"
@@ -206,6 +255,11 @@
                 class="list-group-item list-group-item-action py-1 px-2"
                 href="#spinners"
                 >Spinners</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#banner"
+                >Banner</a
               >
               <a
                 class="list-group-item list-group-item-action py-1 px-2"
@@ -240,18 +294,49 @@
               >
               <a
                 class="list-group-item list-group-item-action py-1 px-2"
-                href="#buttons"
-                >Buttons</a
+                href="#autocomplete"
+                >Autocomplete</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#date-picker"
+                >Date Picker</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#select"
+                >Select</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#filter"
+                >filter</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#toggle"
+                >Toggle</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#tag"
+                >tag</a
+              >
+              <!-- Layout & Structure -->
+              <a
+                class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold link-underline link-underline-opacity-0 fs-6"
+                href="#layout-and-structure"
+                >Layout & Structure</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#banner"
+                >Banner</a
               >
             </div>
           </aside>
           <section class="main-content col-lg-10 py-4 px-4">
-            <div
-              data-bs-spy="scroll"
-              data-bs-target="#list-example"
-              data-bs-smooth-scroll="true"
-              tabindex="0"
-            >
+            <div tabindex="0">
               <!-- Actions -->
               <div class="component-category">
                 <h2
@@ -473,7 +558,9 @@
                 <hr class="d-block mt-0 mb-5" />
                 <!-- Icon System -->
                 <article class="component-section">
-                  <div class="d-flex align-items-baseline gap-2 justify-content-between">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
                     <h3
                       id="icon-system"
                       class="h5"
@@ -487,10 +574,22 @@
                         title="Material Symbols"
                         target="_blank"
                       >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg mt-1" viewBox="0 0 16 16" style="height: 1.5rem; width: 1.5rem;">
-                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
-                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
-                      </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-link-45deg mt-1"
+                          viewBox="0 0 16 16"
+                          style="height: 1.5rem; width: 1.5rem"
+                        >
+                          <path
+                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"
+                          />
+                          <path
+                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"
+                          />
+                        </svg>
                       </a>
                       <a
                         class="icon-link text-body-tertiary"
@@ -540,10 +639,12 @@
                       </figure>
                     </div>
                   </div>
-                </article>                
+                </article>
                 <!-- Modal -->
                 <article class="component-section">
-                  <div class="d-flex align-items-baseline gap-2 justify-content-between">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
                     <h3
                       id="modal"
                       class="h5"
@@ -598,7 +699,15 @@
                     your site for lightboxes, user notifications, or completely
                     custom content.
                   </p>
-                  <p>Below is a <em>static</em> modal example (meaning its <code>position</code> and <code>display</code> have been overridden). Included are the modal header, modal body (required for <code>padding</code>), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.</p>
+                  <p>
+                    Below is a <em>static</em> modal example (meaning its
+                    <code>position</code> and <code>display</code> have been
+                    overridden). Included are the modal header, modal body
+                    (required for <code>padding</code>), and modal footer
+                    (optional). We ask that you include modal headers with
+                    dismiss actions whenever possible, or provide another
+                    explicit dismiss action.
+                  </p>
                   <div class="code-sample">
                     <p
                       class="codepen"
@@ -611,7 +720,9 @@
                 </article>
                 <!-- Tooltips -->
                 <article class="component-section">
-                  <div class="d-flex align-items-baseline gap-2 justify-content-between">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
                     <h3
                       id="tooltips"
                       class="h5"
@@ -662,13 +773,15 @@
                     </div>
                   </div>
                   <p>
-                    As mentioned above, you must initialize tooltips before they can be used. One way to initialize all tooltips on a page would be to select them by their data-bs-toggle attribute.
+                    As mentioned above, you must initialize tooltips before they
+                    can be used. One way to initialize all tooltips on a page
+                    would be to select them by their data-bs-toggle attribute.
                   </p>
                   <div class="code-sample">
                     <p
                       class="codepen"
                       data-height="300"
-                      data-slug-hash="OJqZWQz" 
+                      data-slug-hash="OJqZWQz"
                       data-token="7192d993b87f18c2699864720e00cef2"
                       data-user="ericthayer"
                     ></p>
@@ -686,7 +799,9 @@
                 <hr class="d-block mt-0 mb-5" />
                 <!-- Accordion -->
                 <article class="component-section">
-                  <div class="d-flex align-items-baseline gap-2 justify-content-between">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
                     <h3
                       id="accordion"
                       class="h5"
@@ -752,10 +867,12 @@
                       data-user="ericthayer"
                     ></p>
                   </div>
-                </article>                
+                </article>
                 <!-- Pagination -->
                 <article class="component-section">
-                  <div class="d-flex align-items-baseline gap-2 justify-content-between">
+                  <div
+                    class="d-flex align-items-baseline gap-2 justify-content-between"
+                  >
                     <h3
                       id="pagination"
                       class="h5"
@@ -806,7 +923,15 @@
                     </div>
                   </div>
                   <p>
-                    Used for showing pagination to indicate a series of related content exists across multiple pages. We use a large block of connected links for our pagination, making links hard to miss and easily scalable—all while providing large hit areas. Pagination is built with list HTML elements so screen readers can announce the number of available links. Use a wrapping <code>nav</code> element to identify it as a navigation section to screen readers and other assistive technologies.
+                    Used for showing pagination to indicate a series of related
+                    content exists across multiple pages. We use a large block
+                    of connected links for our pagination, making links hard to
+                    miss and easily scalable—all while providing large hit
+                    areas. Pagination is built with list HTML elements so screen
+                    readers can announce the number of available links. Use a
+                    wrapping <code>nav</code> element to identify it as a
+                    navigation section to screen readers and other assistive
+                    technologies.
                   </p>
                   <div class="code-sample">
                     <p
@@ -817,7 +942,7 @@
                       data-user="ericthayer"
                     ></p>
                   </div>
-                </article>                
+                </article>
               </div>
             </div>
           </section>
