@@ -60,7 +60,8 @@
 
 @import "layout";
 
-// demo styles
+// Demo styles: Quick and dirty
+// Not for CoBank production
 
 img,
 svg {
@@ -72,6 +73,10 @@ svg {
   svg {
     width: 8rem;
   }
+}
+
+.list-group {
+  margin-left: -0.5rem;
 }
 
 .list-group-item-header {
@@ -117,4 +122,12 @@ svg {
 
 .code-sample {
   margin-top: 2rem;
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.list-group {
+
 }
