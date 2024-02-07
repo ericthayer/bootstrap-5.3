@@ -152,3 +152,7 @@ article p {
     color: var(--bs-tertiary-color);
   }
 }
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  background-color: #f3f5f7;
+}
