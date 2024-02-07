@@ -17,11 +17,11 @@
   </head>
   <body
     data-bs-spy="scroll"
-    data-bs-target="#ComponentList"
+    data-bs-target="#componentList"
     data-bs-smooth-scroll="true"
   >
     <div
-      class="app-header mb-lg-3"
+      class="app-header mb-lg-3 sticky-top"
       role="Banner"
     >
       <nav
@@ -39,80 +39,10 @@
               />
             </div>
           </a>
-          <button
-            class="navbar-toggler mb-2 me-2 px-2 border-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="material-symbols-outlined">menu</span>
-          </button>
           <div
             class="collapse navbar-collapse justify-content-lg-end pt-2 pb-4 px-3 p-lg-0"
             id="navbarText"
           >
-            <ul class="navbar-nav me-auto me-lg-0 mb-2 mb-lg-0">
-              <li class="nav-item d-lg-none">
-                <a
-                  class="nav-link"
-                  href="#actions"
-                  >Actions</a
-                >
-              </li>
-              <li class="nav-item d-lg-none">
-                <a
-                  class="nav-link"
-                  href="#communication"
-                  >Communication</a
-                >
-              </li>
-              <li class="nav-item d-lg-none">
-                <a
-                  class="nav-link"
-                  href="#layout"
-                  >Layout</a
-                >
-              </li>
-              <li class="nav-item d-lg-none">
-                <a
-                  class="nav-link"
-                  aria-current="page"
-                  href="#patterns"
-                  >Patterns</a
-                >
-              </li>
-              <li class="nav-item d-none pb-3 pb-lg-0">
-                <form class="d-flex flex-grow-1 gap-3 px-3 pe-lg-0">
-                  <div class="">
-                    <input
-                      type="search"
-                      class="form-control bg-secondary"
-                      id="exampleInputEmail1"
-                      aria-describedby="searchHelp"
-                      placeholder="search"
-                      data-bs-theme=""
-                    />
-                    <div
-                      id="searchHelp"
-                      class="form-text visually-hidden"
-                    >
-                      We'll never share your email with anyone else.
-                    </div>
-                  </div>
-                  <div class="">
-                    <button
-                      type="button"
-                      class="btn btn-outline-secondary px-2 align-items-center d-flex"
-                    >
-                      <span class="material-symbols-outlined">search</span>
-                    </button>
-                  </div>
-                </form>
-              </li>
-            </ul>
             <div class="d-flex gap-2 nav-links">
               <a
                 href="https://getbootstrap.com/"
@@ -180,60 +110,87 @@
               </div>
             </div>
           </div>
+          <button
+            class="navbar-toggler mb-2 me-2 px-2 border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="material-symbols-outlined">segment</span>
+          </button>
         </div>
       </nav>
     </div>
     <div class="container">
       <div class="row">
         <!-- Sidebar -->
-        <aside class="sidebar d-none d-lg-block col-lg-2 py-2 ps-4 sticky-top">
-          <div
-            id="ComponentList"
-            class="list-group list-group-flush"
-          >
+        <aside
+          id="componentList"
+          class="sidebar d-none d-lg-block col-lg-2 pt-2 pb-4 ps-4 sticky-top"
+        >
+          <div class="list-group list-group-flush">
             <!-- Foundation -->
             <a
               class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
-              href="#foundation"
+              data-bs-toggle="collapse"
+              href="#collapseFoundation"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseFoundation"
               >Foundation</a
             >
-
-            <a
-              class="list-group-item list-group-item-action py-1 px-2"
-              href="#tokens"
-              >Tokens</a
+            <div
+              class="collapse show"
+              id="collapseFoundation"
             >
-            <a
-              class="list-group-item list-group-item-action py-1 px-2"
-              href="#icon-system"
-              >Icon System</a
-            >
-            <a
-              class="list-group-item list-group-item-action py-1 px-2"
-              href="#typography"
-              >Typography</a
-            >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#tokens"
+                >Tokens</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#icon-system"
+                >Icon System</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#typography"
+                >Typography</a
+              >
+            </div>
             <!-- Actions -->
             <a
               class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
-              href="#actions"
+              data-bs-toggle="collapse"
+              href="#collapseActions"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseActions"
               >Actions</a
             >
-            <a
-              class="list-group-item list-group-item-action py-1 px-2"
-              href="#buttons"
-              >Buttons</a
+            <div
+              class="collapse show"
+              id="collapseActions"
             >
-            <a
-              class="list-group-item list-group-item-action py-1 px-2"
-              href="#button-group"
-              >Button Group</a
-            >
-            <a
-              class="list-group-item list-group-item-action py-1 px-2"
-              href="#header-actions"
-              >Header Actions</a
-            >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#buttons"
+                >Buttons</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#button-group"
+                >Button Group</a
+              >
+              <a
+                class="list-group-item list-group-item-action py-1 px-2"
+                href="#header-actions"
+                >Header Actions</a
+              >
+            </div>
             <!-- Communication -->
             <a
               class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
@@ -445,7 +402,7 @@
               class="list-group-item list-group-item-action py-1 px-2"
               href="#range"
               >Range</a
-            >            
+            >
             <a
               class="list-group-item list-group-item-action py-1 px-2"
               href="#input-group"
@@ -523,25 +480,20 @@
         >
           <div tabindex="0">
             <!-- Foundation -->
-            <div class="component-category">
-              <h2
-                id="foundation"
-                class="h3"
+            <div
+              id="foundation"
+              class="component-category"
+            >
+              <h2 class="h3">Foundation</h2>
+              <hr class="d-block mt-0" />
+              <article
+                id="tokens"
+                class="component-section"
               >
-                Foundation
-              </h2>
-              <hr class="d-block mt-0 mb-5" />
-              <!-- Tokens -->
-              <article class="component-section">
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="tokens"
-                    class="h5"
-                  >
-                    Tokens
-                  </h3>
+                  <h3 class="h5">Tokens</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -593,14 +545,14 @@
                 </p>
                 <div class="code-sample">
                   <div class="d-flex">
-                    <figure class="figure mx-auto flex-grow-1">
+                    <figure class="figure mx-auto mb-0 flex-grow-1">
                       <a
                         href="https://fonts.google.com/icons"
                         class=""
                       >
                         <img
                           src="https://assets.codepen.io/97621/cobank-design-tokens-demo-02.png?format=avif"
-                          class="figure-img img-fluid rounded"
+                          class="figure-img img-fluid mb-0 rounded"
                           alt="Design Tokens"
                           loading="lazy"
                         />
@@ -615,16 +567,14 @@
                 </div>
               </article>
               <!-- Icon System -->
-              <article class="component-section">
+              <article
+                id="icon-system"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="icon-system"
-                    class="h5"
-                  >
-                    Icon System
-                  </h3>
+                  <h3 class="h5">Icon System</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -678,14 +628,14 @@
                 </p>
                 <div class="code-sample">
                   <div class="d-flex">
-                    <figure class="figure mx-auto flex-grow-1">
+                    <figure class="figure mx-auto mb-0 flex-grow-1">
                       <a
                         href="https://fonts.google.com/icons"
                         class="ratio ratio-16x9"
                       >
                         <img
                           src="https://assets.codepen.io/97621/material-symbols-cover.png?width=1920&height=1080&format=avif"
-                          class="figure-img img-fluid rounded"
+                          class="figure-img img-fluid mb-0 rounded"
                           alt="Material Symbols"
                           loading="lazy"
                         />
@@ -700,16 +650,14 @@
                 </div>
               </article>
               <!-- Typography -->
-              <article class="component-section">
+              <article
+                id="typography"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="typography"
-                    class="h5"
-                  >
-                    Typography
-                  </h3>
+                  <h3 class="h5">Typography</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -762,25 +710,22 @@
               </article>
             </div>
             <!-- Actions -->
-            <div class="component-category">
+            <div id="actions" class="component-category">
               <h2
-                id="actions"
                 class="h3"
               >
                 Actions
               </h2>
-              <hr class="d-block mt-0 mb-5" />
+              <hr class="d-block my-0" />
               <!-- Buttons -->
-              <article class="component-section">
+              <article
+                id="buttons"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="buttons"
-                    class="h5"
-                  >
-                    Buttons
-                  </h3>
+                  <h3 class="h5">Buttons</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -842,16 +787,14 @@
                 </div>
               </article>
               <!-- Button Group -->
-              <article class="component-section">
+              <article
+                id="button-group"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="button-group"
-                    class="h5"
-                  >
-                    Button Group
-                  </h3>
+                  <h3 class="h5">Button Group</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -910,16 +853,14 @@
                 </div>
               </article>
               <!-- Header Actions -->
-              <article class="component-section">
+              <article
+                id="header-actions"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="header-actions"
-                    class="h5"
-                  >
-                    Header Actions
-                  </h3>
+                  <h3 class="h5">Header Actions</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -972,25 +913,21 @@
               </article>
             </div>
             <!-- Communication -->
-            <div class="component-category">
-              <h2
-                id="communication"
-                class="h3"
-              >
-                Communication
-              </h2>
-              <hr class="d-block mt-0 mb-5" />
+            <div
+              id="communication"
+              class="component-category"
+            >
+              <h2 class="h3">Communication</h2>
+              <hr class="d-block my-0" />
               <!-- Icon -->
-              <article class="component-section">
+              <article
+                id="icon"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="icon"
-                    class="h5"
-                  >
-                    Icon
-                  </h3>
+                  <h3 class="h5">Icon</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -1053,16 +990,14 @@
                 </div>
               </article>
               <!-- Spinners -->
-              <article class="component-section">
+              <article
+                id="spinners"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="spinners"
-                    class="h5"
-                  >
-                    Spinners
-                  </h3>
+                  <h3 class="h5">Spinners</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -1122,16 +1057,14 @@
                 </div>
               </article>
               <!-- Modal -->
-              <article class="component-section">
+              <article
+                id="modal"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="modal"
-                    class="h5"
-                  >
-                    Modal
-                  </h3>
+                  <h3 class="h5">Modal</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -1200,16 +1133,14 @@
                 </div>
               </article>
               <!-- Tooltips -->
-              <article class="component-section">
+              <article
+                id="tooltips"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="tooltips"
-                    class="h5"
-                  >
-                    Tooltips
-                  </h3>
+                  <h3 class="h5">Tooltips</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -1277,18 +1208,16 @@
               >
                 Lists
               </h2>
-              <hr class="d-block mt-0 mb-5" />
+              <hr class="d-block my-0" />
               <!-- Accordion -->
-              <article class="component-section">
+              <article
+                id="accordion"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="accordion"
-                    class="h5"
-                  >
-                    Accordion
-                  </h3>
+                  <h3 class="h5">Accordion</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -1350,16 +1279,14 @@
                 </div>
               </article>
               <!-- Pagination -->
-              <article class="component-section">
+              <article
+                id="pagination"
+                class="component-section"
+              >
                 <div
                   class="d-flex align-items-baseline gap-2 justify-content-between"
                 >
-                  <h3
-                    id="pagination"
-                    class="h5"
-                  >
-                    Pagination
-                  </h3>
+                  <h3 class="h5">Pagination</h3>
                   <div class="d-flex gap-3">
                     <a
                       class="icon-link text-body-tertiary"
@@ -1432,6 +1359,364 @@
       class="app-footer"
       role="conent-info"
     ></footer>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header justify-content-end">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body pt-0">
+        <div class="list-group list-group-flush">
+          <!-- Foundation -->
+          <a
+            class="list-group-item list-group-item-action mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            data-bs-toggle="collapse"
+            href="#collapseMobileFoundation"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseMobileFoundation"
+            >Foundation</a
+          >
+          <div
+            class="collapse show"
+            id="collapseMobileFoundation"
+          >
+            <a
+              class="list-group-item list-group-item-action py-1 px-2"
+              href="#tokens"
+              ><span data-bs-dismiss="offcanvas">Tokens</span></a
+            >
+            <a
+              class="list-group-item list-group-item-action py-1 px-2"
+              href="#icon-system"
+              ><span data-bs-dismiss="offcanvas">Icon System</span></a
+            >
+            <a
+              class="list-group-item list-group-item-action py-1 px-2"
+              href="#typography"
+              ><span data-bs-dismiss="offcanvas">Typography</span></a
+            >
+          </div>
+          <!-- Actions -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            data-bs-toggle="collapse"
+            href="#collapseActions"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseActions"
+            >Actions</a
+          >
+          <div
+            class="collapse show"
+            id="collapseActions"
+          >
+            <a
+              class="list-group-item list-group-item-action py-1 px-2"
+              href="#buttons"
+              ><span data-bs-dismiss="offcanvas">Buttons</span></a
+            >
+            <a
+              class="list-group-item list-group-item-action py-1 px-2"
+              href="#button-group"
+              ><span data-bs-dismiss="offcanvas">Button Group</span></a
+            >
+            <a
+              class="list-group-item list-group-item-action py-1 px-2"
+              href="#header-actions"
+              ><span data-bs-dismiss="offcanvas">Header Actions</span></a
+            >
+          </div>
+          <!-- Communication -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#communication"
+            >Communication</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#icon"
+            ><span data-bs-dismiss="offcanvas">Icon</span></a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#spinners"
+            ><span data-bs-dismiss="offcanvas">Spinners</span></a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#banner"
+            ><span data-bs-dismiss="offcanvas">Banner</span></a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#alert"
+            ><span data-bs-dismiss="offcanvas">Alert</span></a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#badge"
+            ><span data-bs-dismiss="offcanvas">Badge</span></a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#modal"
+            ><span data-bs-dismiss="offcanvas">Modal</span></a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#tooltips"
+            ><span data-bs-dismiss="offcanvas">Tooltips</span></a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#toasts"
+            ><span data-bs-dismiss="offcanvas">Toasts</span></a
+          >
+          <!-- Input & Selection -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#input-and-selection"
+            >Input & Selection</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#autocomplete"
+            >Autocomplete</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#date-picker"
+            >Date Picker</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#filter"
+            >Filter</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#toggle"
+            >Toggle</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#tag"
+            >Tag</a
+          >
+          <!-- Layout & Structure -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#layout-and-structure"
+            >Layout & Structure</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#card"
+            >Card</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#media-card"
+            >Media Card</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#page-layout"
+            >Page Layout</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#form-layout"
+            >Form Layout</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#grid"
+            >Grid</a
+          >
+          <!-- Navigation -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#navigation"
+            >Navigation</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#main-menu"
+            >Main Menu</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#breadcrumbs"
+            >Breadcrumbs</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#tabs"
+            >Tabs</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#pagination"
+            >Pagination</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#nav-drawer"
+            >Nav Drawer</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#Toolbar"
+            >Toolbar</a
+          >
+          <!-- Lists -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#lists"
+            >Lists</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#action-list"
+            >Action List</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#select-list"
+            >Select List</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#nav-list"
+            >Nav List</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#accordion"
+            >Accordion</a
+          >
+          <!-- Tables -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#tables"
+            >Tables</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#table"
+            >Table</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#data-table"
+            >Data Table</a
+          >
+          <!-- Forms -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#forms"
+            >Forms</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#form-control"
+            >Form control</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#select"
+            >Select</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#checks-and-radios"
+            >Checks / Radios</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#range"
+            >Range</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#input-group"
+            >Input Group</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#floating-label"
+            >Floating Label</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#validation"
+            >Validation</a
+          >
+          <!-- Media -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#media"
+            >Media</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#figure"
+            >Figure</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#embed"
+            >Embed</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#avatar"
+            >Avatar</a
+          >
+          <!-- Patterns -->
+          <a
+            class="list-group-item list-group-item-action mt-3 mb-0 pt-0 pb-1 ps-2 fw-semibold fs-6"
+            href="#patterns"
+            >Patterns</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#app-header"
+            >App Header</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#app-footer"
+            >App Footer</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#dashboard"
+            >Dashboard</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#login-and-signup"
+            >Login / Sign up</a
+          >
+          <a
+            class="list-group-item list-group-item-action py-1 px-2"
+            href="#dashboard"
+            >Dashboard</a
+          >
+        </div>
+      </div>
+    </div>
   </body>
   <script
     type="module"

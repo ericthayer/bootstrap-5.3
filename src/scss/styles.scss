@@ -68,8 +68,12 @@ html {
 }
 
 .sidebar {
-  height: calc(100vh - 2rem);
+  --header-height: 4rem;
+  height: calc(100vh - var(--header-height, 60px));
   overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-margin-top: var(--header-height);
+  top: var(--header-height);
 }
 
 img,
@@ -106,27 +110,42 @@ svg {
 }
 
 .component-category {
-
-  & + & {
-    margin-top: 5rem;
-    padding-top: 3rem;
-  }
-}
-
-.component-section {
-
   & + & {
     margin-top: 2rem;
     padding-top: 2rem;
   }
+
+  @media (width > 991px) {
+    & + & {
+      margin-top: 5rem;
+      padding-top: 3rem;
+    }
+  }
 }
 
-@media screen and (width < 992px) {
- .app-header {
-    position: sticky;
-    top: 0;
-    z-index: 1100;
-  }  
+hr + .component-section {
+  @media (width > 991px) {
+    margin-top: 3rem;
+    padding-top: 0;
+  }
+}
+
+.component-section {
+  padding-top: 4rem;
+
+  & + & {
+    margin-top: 0rem;
+    padding-top: 4rem;
+  }
+
+  @media (width > 991px) {
+    padding-top: 0;
+
+    & + & {
+      margin-top: 2rem;
+      padding-top: 2rem;
+    }
+  }
 }
 
 .code-sample {
@@ -156,3 +175,15 @@ article p {
 .list-group-item-action:hover, .list-group-item-action:focus {
   background-color: #f3f5f7;
 }
+
+.offcanvas {
+  --bs-offcanvas-width: 240px;
+}
+
+// .app-header {
+//   @media (width < 992px) {
+//     position: sticky;
+//     top: 0;
+//     z-index: 1020;
+//   }
+// }
