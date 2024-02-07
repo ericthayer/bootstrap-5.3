@@ -3,19 +3,46 @@
 
 // 2. Include any default variable overrides here
 
+
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
-// 4. Include any default map overrides here
+$custom-colors: (
+  "cobank-primary-blue": #005288
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
-// 5. Include remainder of required parts
+
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+
+// 4. Include any default map overrides here (theme)
+// Add a custom color to new theme maps
+
+// Light mode
+$custom-colors-text: ("custom-color": #005288);
+$custom-colors-bg-subtle: ("custom-color": #e1d2fe);
+$custom-colors-border-subtle: ("custom-color": #bfa1fc);
+
+$theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
+$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
+$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
+
+// Dark mode
+$custom-colors-text-dark: ("custom-color": #e1d2f2);
+$custom-colors-bg-subtle-dark: ("custom-color": #004471);
+$custom-colors-border-subtle-dark: ("custom-color": #e1d2f2);
+
+$theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-dark);
+$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
+$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
+
+// 5. Include remainder of required parts
 @import "../node_modules/bootstrap/scss/root";
 
 // 6. Optionally include any other parts as needed
-@import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
@@ -59,131 +86,4 @@
 // 8. Add additional custom code here
 
 @import "layout";
-
-// Demo styles: Quick and dirty
-// Not for CoBank production
-
-html {
-  scroll-behavior: smooth;
-}
-
-.sidebar {
-  --header-height: 4rem;
-  height: calc(100vh - var(--header-height, 60px));
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scroll-margin-top: var(--header-height);
-  top: var(--header-height);
-}
-
-img,
-svg {
-  max-width: 100%;
-}
-
-.navbar-brand {
-  img,
-  svg {
-    width: 8rem;
-  }
-}
-
-.list-group {
-  margin-left: -0.5rem;
-}
-
-.list-group-item-header {
-  font-weight: 550;
-}
-
-.list-group-item {
-  border: none;
-  
-  &.active {
-    background-color: #eee;
-    color: inherit;
-  }
-}
-
-.list-group-item-action {
-  font-size: 0.875rem;
-}
-
-.component-category {
-  & + & {
-    margin-top: 2rem;
-    padding-top: 2rem;
-  }
-
-  @media (width > 991px) {
-    & + & {
-      margin-top: 5rem;
-      padding-top: 3rem;
-    }
-  }
-}
-
-hr + .component-section {
-  @media (width > 991px) {
-    margin-top: 3rem;
-    padding-top: 0;
-  }
-}
-
-.component-section {
-  padding-top: 4rem;
-
-  & + & {
-    margin-top: 0rem;
-    padding-top: 4rem;
-  }
-
-  @media (width > 991px) {
-    padding-top: 0;
-
-    & + & {
-      margin-top: 2rem;
-      padding-top: 2rem;
-    }
-  }
-}
-
-.code-sample {
-  margin-top: 2rem;
-}
-
-.fs-7 {
-  font-size: 0.875rem;
-}
-
-.color-mode-picker {
-  .dropdown-toggle::after {
-    display: none;
-  }
-}
-
-article p {
-  max-width: 96ch;
-}
-
-.nav-links {
-  a {
-    color: var(--bs-tertiary-color);
-  }
-}
-
-.list-group-item-action:hover, .list-group-item-action:focus {
-  background-color: #f3f5f7;
-}
-
-.offcanvas {
-  --bs-offcanvas-width: 240px;
-}
-
-// .app-header {
-//   @media (width < 992px) {
-//     position: sticky;
-//     top: 0;
-//     z-index: 1020;
-//   }
-// }
+@import "demo";
