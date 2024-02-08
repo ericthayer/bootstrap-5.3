@@ -1,55 +1,27 @@
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// 1. Include functions and vaiables first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
-
-
-// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
-$custom-colors: (
-  "cobank-primary-blue": #005288
-);
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
+// 2. Include any default variable overrides here
+@import "custom-variables";
 
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/utilities";
 
 // 4. Include any default map overrides here (theme)
-// Add a custom color to new theme maps
+@import "theme";
 
-// Light mode
-$custom-colors-text: ("custom-color": #005288);
-$custom-colors-bg-subtle: ("custom-color": #e1d2fe);
-$custom-colors-border-subtle: ("custom-color": #bfa1fc);
-
-$theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
-$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
-$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
-
-// Dark mode
-$custom-colors-text-dark: ("custom-color": #e1d2f2);
-$custom-colors-bg-subtle-dark: ("custom-color": #004471);
-$custom-colors-border-subtle-dark: ("custom-color": #e1d2f2);
-
-$theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-dark);
-$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
-$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
-
-// 5. Include remainder of required parts
+// 5. Include remainder of required parts (optionally include any other parts as needed)
 @import "../node_modules/bootstrap/scss/root";
-
-// 6. Optionally include any other parts as needed
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
 
-// Identified CoBank Components
+// 6. Identified CoBank Components
 @import "../node_modules/bootstrap/scss/tables";
 @import "../node_modules/bootstrap/scss/forms";
 @import "../node_modules/bootstrap/scss/buttons";
@@ -76,14 +48,14 @@ $theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $c
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/placeholders";
 
-// Helper classes go last
-
+// 7. Helper classes go last to override
 @import "../node_modules/bootstrap/scss/helpers";
 
-// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+// 8. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
-// 8. Add additional custom code here
+// 9. Add additional custom code here
 
+// Demo Code - NOT FOR PRODUCTION
 @import "layout";
 @import "demo";
