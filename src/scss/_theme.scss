@@ -1,7 +1,7 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // Light mode
-$custom-colors-text: ("custom-color": #005288);
+$custom-colors-text: ("cobank-primary-blue": #005288);
 $custom-colors-bg-subtle: ("custom-color": #e1d2fe);
 $custom-colors-border-subtle: ("custom-color": #bfa1fc);
 
@@ -10,7 +10,7 @@ $theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-su
 $theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
 
 // Dark mode
-$custom-colors-text-dark: ("custom-color": #e1d2f2);
+$custom-colors-text-dark: ("custom-color": red);
 $custom-colors-bg-subtle-dark: ("custom-color": #004471);
 $custom-colors-border-subtle-dark: ("custom-color": #e1d2f2);
 
