@@ -1,19 +1,19 @@
-// 1. Include functions and vaiables first (so you can manipulate colors, SVGs, calc, etc)
+// Include functions and vaiables first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
 
-// 2. Include any default variable overrides here
-@import "custom-variables";
+// Include any default variable overrides here
+// @import "custom-variables";
 
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/utilities";
 
-// 4. Include any default map overrides here (theme)
-@import "theme";
+// Include any default map overrides here (theme)
+// @import "theme-build";
 
-// 5. Include remainder of required parts (optionally include any other parts as needed)
+// Include remainder of required parts (optionally include any other parts as needed)
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
@@ -21,7 +21,7 @@
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
 
-// 6. Identified CoBank Components
+// Identified CoBank Components
 @import "../node_modules/bootstrap/scss/tables";
 @import "../node_modules/bootstrap/scss/forms";
 @import "../node_modules/bootstrap/scss/buttons";
@@ -48,14 +48,12 @@
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/placeholders";
 
-// 7. Helper classes go last to override
+// Helper classes go last to override
 @import "../node_modules/bootstrap/scss/helpers";
 
-// 8. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+// Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
-// 9. Add additional custom code here
+// Add additional custom code here
 
-// Demo Code - NOT FOR PRODUCTION
-@import "layout";
-@import "demo";
+@import "theme";

@@ -1,19 +1,249 @@
-@import "../node_modules/bootstrap/scss/functions";
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&display=swap");
 
-// Light mode
-$custom-colors-text: ("cobank-primary-blue": #005288);
-$custom-colors-bg-subtle: ("custom-color": #e1d2fe);
-$custom-colors-border-subtle: ("custom-color": #bfa1fc);
+[data-bs-theme="cobank"] {
 
-$theme-colors-text: map-merge($theme-colors-text, $custom-colors-text);
-$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, $custom-colors-bg-subtle);
-$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, $custom-colors-border-subtle);
+  // primitives
+  // TODO: these will get renamed after token work in Figma - Eric
+  --cobank-primary-blue: #005288;
+  --cobank-primary-blue-dark: #00395F;
+  --cobank-primary-blue-light: #2D95DA;
+  --cobank-primary-green: #387C2B;
+  --cobank-primary-green-dark: #245A1A;
+  --cobank-primary-green-light: #65B360;
 
-// Dark mode
-$custom-colors-text-dark: ("custom-color": red);
-$custom-colors-bg-subtle-dark: ("custom-color": #004471);
-$custom-colors-border-subtle-dark: ("custom-color": #e1d2f2);
+  --cobank-font-ui: "Inter", var(--bs-font-sans-serif);
+  --cobank-font-sans-serif: "Arimo", var(--bs-font-sans-serif);
 
-$theme-colors-text-dark: map-merge($theme-colors-text-dark, $custom-colors-text-dark);
-$theme-colors-bg-subtle-dark: map-merge($theme-colors-bg-subtle-dark, $custom-colors-bg-subtle-dark);
-$theme-colors-border-subtle-dark: map-merge($theme-colors-border-subtle-dark, $custom-colors-border-subtle-dark);
+  // semantic
+  --cobank-primary-link-color: #0074C2;
+  --cobank-primary-link-color-rgb: 0, 116, 194;
+
+  
+  // Bootstrap colors
+  --bs-blue: var(var(--cobank-primary-blue));
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-black: #000;
+  --bs-white: #fff;
+  --bs-black-rgb: 0, 0, 0;
+  --bs-white-rgb: 255, 255, 255;
+
+  // neutrals
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-gray-100: #f8f9fa;
+  --bs-gray-200: #e9ecef;
+  --bs-gray-300: #dee2e6;
+  --bs-gray-400: #ced4da;
+  --bs-gray-500: #adb5bd;
+  --bs-gray-600: #6c757d;
+  --bs-gray-700: #495057;
+  --bs-gray-800: #343a40;
+  --bs-gray-900: #212529;
+
+  // theme
+  --bs-primary: #0d6efd;
+  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-bg-subtle: #cfe2ff;
+  --bs-primary-border-subtle: #9ec5fe;
+  --bs-primary-text-emphasis: #052c65;
+  
+  --bs-secondary: #6c757d;
+  --bs-secondary-rgb: 108, 117, 125;
+  --bs-secondary-bg-subtle: #e2e3e5;
+  --bs-secondary-border-subtle: #c4c8cb;
+  --bs-secondary-text-emphasis: #2b2f32;
+
+  --bs-success: #198754;
+  --bs-success-rgb: 25, 135, 84;
+  --bs-success-bg-subtle: #d1e7dd;
+  --bs-success-border-subtle: #a3cfbb;
+  --bs-success-text-emphasis: #0a3622;
+
+  --bs-info: #0dcaf0;
+  --bs-info-rgb: 13, 202, 240;
+  --bs-info-bg-subtle: #cff4fc;
+  --bs-info-border-subtle: #9eeaf9;
+  --bs-info-text-emphasis: #055160;
+
+  --bs-warning: #ffc107;
+  --bs-warning-rgb: 255, 193, 7;
+  --bs-warning-bg-subtle: #fff3cd;
+  --bs-warning-border-subtle: #ffe69c;
+  --bs-warning-text-emphasis: #664d03;
+
+  --bs-danger: #dc3545;
+  --bs-danger-rgb: 220, 53, 69;
+  --bs-danger-bg-subtle: #f8d7da;
+  --bs-danger-border-subtle: #f1aeb5;
+  --bs-danger-text-emphasis: #58151c;
+  
+  --bs-light: #f8f9fa;
+  --bs-light-rgb: 248, 249, 250;
+  --bs-light-bg-subtle: #fcfcfd;
+  --bs-light-border-subtle: #e9ecef;
+  --bs-light-text-emphasis: #495057;
+
+  --bs-dark: #212529;
+  --bs-dark-rgb: 33, 37, 41;
+  --bs-dark-bg-subtle: #ced4da;
+  --bs-dark-border-subtle: #adb5bd;
+  --bs-dark-text-emphasis: #495057;
+
+  // fonts
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  // gradients
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+  
+  // body  
+  --bs-body-bg: #fff;
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-body-color: #212529;
+  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-font-family: var(--cobank-font-ui);
+  --bs-body-font-size: 1rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.5;
+  
+  // text
+  --bs-heading-color: inherit;
+  
+  // link styles
+  --bs-link-color: var(--cobank-primary-link-color);
+  --bs-link-color-rgb: 13, 110, 253;
+  --bs-link-decoration: underline;
+  --bs-link-hover-color: var(--cobank-primary-blue-light);
+  --bs-link-hover-color-rgb: 10, 88, 202;
+
+  // code
+  --bs-code-color: #d63384;
+
+  // text highlight
+  --bs-highlight-color: #212529;
+  --bs-highlight-bg: #fff3cd;
+
+  // border style
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #dee2e6;
+  --bs-border-color-translucent: rgba(0, 0, 0, .175);
+  --bs-border-radius: .375rem;
+  --bs-border-radius-sm: .25rem;
+  --bs-border-radius-lg: .5rem;
+  --bs-border-radius-xl: 1rem;
+  --bs-border-radius-xxl: 2rem;
+  --bs-border-radius-2xl: 4rem;
+  --bs-border-radius-pill: 50rem;
+
+  // box-shadow
+  --bs-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  --bs-box-shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, .075);
+
+  // focus state
+  --bs-focus-ring-width: .25rem;
+  --bs-focus-ring-opacity: .25;
+  --bs-focus-ring-color: rgba(13, 110, 253, .25);
+
+  // form validation
+  --bs-form-valid-color: #198754;
+  --bs-form-valid-border-color: #198754;
+  --bs-form-invalid-color: #dc3545;
+  --bs-form-invalid-border-color: #dc3545;
+
+  .dropdown-menu {
+    --bs-dropdown-bg: #0c63e4;
+    --bs-dropdown-link-active-bg: #084298;
+  }
+
+  .btn-primary {
+    --bs-btn-bg: var(--cobank-primary-green);
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-bg: var(--cobank-primary-green-dark);
+    --bs-btn-hover-border-color: var(--cobank-primary-green-dark);
+    --bs-btn-active-bg: var(--cobank-primary-green-dark);
+    --bs-btn-active-border-color: rgba(255, 255, 255, 0);
+    --bs-btn-focus-border-color: rgba(255, 255, 255, 0);
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-secondary {
+    --bs-btn-bg: #3d8bfc;
+    --bs-btn-border-color: rgba(255, 255, 255, 0.25);
+    --bs-btn-hover-bg: #247cfc;
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 0.25);
+    --bs-btn-active-bg: #0b6dfb;
+    --bs-btn-active-border-color: rgba(255, 255, 255, 0.5);
+    --bs-btn-focus-border-color: rgba(255, 255, 255, 0.5);
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-outline-secondary {
+    --bs-btn-bg: transparent;
+    --bs-btn-color: rgba(255, 255, 255, 1);
+    --bs-btn-border-color: rgba(255, 255, 255, 1);
+    --bs-btn-hover-bg: var(--cobank-primary-green-dark);
+    --bs-btn-hover-border-color: var(--cobank-primary-green-dark);
+    --bs-btn-active-bg: var(--cobank-primary-green-dark);
+    --bs-btn-active-border-color: rgba(255, 255, 255, 0);
+    --bs-btn-focus-border-color: rgba(255, 255, 255, 0);
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+  }
+
+  .text-bg-light {
+    --bs-body-color: var(--cobank-primary-blue);
+    --bs-border-color: var(--cobank-primary-blue);
+    --bs-card-border-color: var(--cobank-primary-blue);
+    --bs-light-bg: var(--bs-light-color);
+    --bs-body-color: var(--cobank-primary-blue);
+    color: var(--bs-body-color) !important;
+
+    .btn-outline-secondary {
+      --bs-btn-color: var(--cobank-primary-blue);
+      --bs-btn-border-color: var(--cobank-primary-blue);
+    }
+  }
+}
+
+@include color-mode(dark) {
+  .navbar {
+    color: var(--bs-primary-text-emphasis);
+    background-color: var(--bs-dark);
+  }
+}
+
+@include color-mode(light) {
+  .navbar {
+    background-color: var(--bs-light);
+  }
+}
+
+
+[data-bs-theme="dark"],
+[data-bs-theme="cobank"],
+.bg-dark, 
+.text-bg-dark {
+  .cobank-logo {
+    position: relative;
+    overflow: hidden;
+    height: 24px;
+    display: flex;
+    margin-top: 5px;
+    
+    img {
+      filter: grayscale(1) invert(1) brightness(1.75);
+      top: 8px !important;
+    }
+  }
+}
