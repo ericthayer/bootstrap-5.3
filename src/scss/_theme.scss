@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&display=swap");
 
-[data-bs-theme="cobank"] {
+[data-bs-theme=cobank] {
 
   // primitives
   // TODO: these will get renamed after token work in Figma - Eric
@@ -31,7 +31,7 @@
   --bs-green: #198754;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
-  --bs-black: #000;
+  --bs-black: #0c0c0c;
   --bs-white: #fff;
   --bs-black-rgb: 0, 0, 0;
   --bs-white-rgb: 255, 255, 255;
@@ -98,6 +98,14 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-dark-text-emphasis: #495057;
 
+  --bs-emphasis-color: var(--bs-black);
+  --bs-emphasis-color-rgb: 0, 0, 0;
+  
+  --bs-tertiary-color: var(--bs-dark);
+  --bs-tertiary-color-rgb: 33, 37, 41;
+  --bs-tertiary-bg: var(--bs-light);
+  --bs-tertiary-bg-rgb: 248, 249, 250;
+
   // fonts
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -106,7 +114,7 @@
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
   
   // body  
-  --bs-body-bg: #fff;
+  --bs-body-bg: var(--bs-light);
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-body-color: #212529;
   --bs-body-color-rgb: 33, 37, 41;
